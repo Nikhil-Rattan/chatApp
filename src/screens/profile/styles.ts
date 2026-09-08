@@ -1,0 +1,66 @@
+import { StyleSheet } from 'react-native';
+import { colors } from '@/theme/theme';
+
+export const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    padding: 22,
+    paddingBottom: 40,
+    backgroundColor: colors.background,
+  },
+  hero: { alignItems: 'center', paddingTop: 18, paddingBottom: 28 },
+  avatarRing: {
+    padding: 5,
+    borderRadius: 60,
+    borderWidth: 2,
+    borderColor: colors.primarySoft,
+    backgroundColor: colors.surface,
+  },
+  name: { fontSize: 26, fontWeight: '800', color: colors.text, marginTop: 16 },
+  presence: { fontSize: 13, color: colors.textMuted, marginTop: 5 },
+  card: {
+    borderRadius: 18,
+    paddingHorizontal: 18,
+    backgroundColor: colors.surface,
+    shadowColor: colors.shadow,
+    shadowOpacity: 0.05,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 7 },
+    elevation: 2,
+  },
+  infoRow: { paddingVertical: 16 },
+  infoLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1.1,
+    textTransform: 'uppercase',
+    color: colors.textMuted,
+  },
+  infoValue: { fontSize: 16, color: colors.text, marginTop: 6 },
+  divider: { height: StyleSheet.hairlineWidth, backgroundColor: colors.border },
+  blockButton: {
+    height: 52,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 26,
+    borderWidth: 1,
+    borderColor: colors.dangerBorder,
+    backgroundColor: colors.dangerSoft,
+  },
+  unblockButton: {
+    borderColor: colors.successBorder,
+    backgroundColor: colors.successSoftAlt,
+  },
+  pressed: { opacity: 0.7 },
+  blockText: { fontSize: 15, fontWeight: '800', color: colors.danger },
+  unblockText: { color: colors.success },
+  help: {
+    fontSize: 12,
+    lineHeight: 18,
+    color: colors.textMuted,
+    textAlign: 'center',
+    marginTop: 11,
+    paddingHorizontal: 18,
+  },
+});

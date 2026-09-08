@@ -1,6 +1,43 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Relay Chat
+
+A performance-focused React Native chat assessment app. It lists contacts with infinite pagination, opens per-contact message threads, sends messages with optimistic updates, fetches profiles through TanStack Query, and stores block/unblock state globally with Zustand.
+
+## Architecture
+
+Each screen is colocated in its own folder and split into three responsibilities:
+
+- `screen.tsx`: rendering and user interaction
+- `useScreen.ts`: query, mutation, state, and navigation logic
+- `styles.ts`: React Native styles
+
+Shared API adapters normalize either array-based or `{ data: [] }` responses into stable domain types. The UI uses FlashList, memoized rows, stable callbacks, native-stack screens, atomic Zustand selectors, cached queries, loading/error/empty states, and release resource/code shrinking. Screen entrance transitions use the native animation driver and honor the operating system’s Reduce Motion preference.
+
+React Query is connected to React Native app focus and network state, requests are cancellable, and an app-level error boundary provides recovery from unexpected rendering failures. The project uses React 19.2’s `useEffectEvent` to keep animation effect logic current without unnecessary effect restarts.
+
+All internal imports use the `@/` alias. Runtime values are provided by `.env`; copy `.env.example` when setting up another machine.
+
+## Run
+
+```sh
+npm install
+cd ios && bundle exec pod install && cd ..
+npm start
+npm run ios # or npm run android
+```
+
+## Verification
+
+```sh
+npm run lint
+npm run typecheck
+npm test
+npm run test:coverage
+```
+---
+
+# React Native template notes
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
