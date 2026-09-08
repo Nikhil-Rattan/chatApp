@@ -4,6 +4,22 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 A performance-focused React Native chat assessment app. It lists contacts with infinite pagination, opens per-contact message threads, sends messages with optimistic updates, fetches profiles through TanStack Query, and stores block/unblock state globally with Zustand.
 
+## Demo
+
+[![Watch the Relay Chat screen recording](docs/screenshots/chat.png)](docs/recordings/recording.webm)
+
+Click the preview above to watch the complete application flow.
+
+## Screenshots
+
+|                                  Chats                                  |                                 Conversation                                  |                             Sent message                              |
+| :---------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| <img src="docs/screenshots/Chat_tab.png" width="220" alt="Chats tab" /> | <img src="docs/screenshots/chat.png" width="220" alt="Conversation screen" /> | <img src="docs/screenshots/msg.png" width="220" alt="Sent message" /> |
+
+|                                   Profile                                    |                                   Settings                                    |
+| :--------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| <img src="docs/screenshots/profile.png" width="220" alt="Contact profile" /> | <img src="docs/screenshots/setting-tab.png" width="220" alt="Settings tab" /> |
+
 ## Architecture
 
 Each screen is colocated in its own folder and split into three responsibilities:
@@ -35,6 +51,7 @@ npm run typecheck
 npm test
 npm run test:coverage
 ```
+
 ---
 
 # React Native template notes
